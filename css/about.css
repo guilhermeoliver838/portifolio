@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* Configura os elementos da seção */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Estilo geral dos títulos h1 */
+h1 {
+    color: white;
+    font-size: 35px;
+}
+
+/* Destaca o nome na apresentação */
+strong {
+    font-size: 20px;
+}
+
+/* Define a cor do texto */
+.home {
+    color: white;
+}
+
+/* Organiza a imagem e o texto da seção pessoal */
+.second-section {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Adiciona espaçamento ao redor da imagem */
+.box-img2 {
+    padding: 2rem;
+}
+
+/* Estiliza a foto da seção "Quem sou eu" */
+.img-profile2 {
+    border-radius: 50%;
+    max-width: 350px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+/* Efeito ao passar o mouse sobre a foto */
+.img-profile2:hover {
+    max-width: 370px;
+}
+
+/* Organiza e estiliza o texto biográfico */
+.me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: white;
+    width: 600px;
+    text-align: justify;
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+/* Define a margem do parágrafo */
+p {
+    margin-top: 22px;
+    margin-bottom: 10px;
+}
+
+/* Define a cor do título da seção */
+.me h1 {
+    color: #0FBDF2;
+}
+
+/* Adiciona espaçamento acima do botão */
+.me2 {
+    padding-top: 1rem;
+}
+
+/* Estiliza o botão do currículo */
+.btn-c button {
+    background-image: linear-gradient(45deg, #003757, #1087cc);
+    padding: 10px 18px;
+    border: none;
+    color: rgb(0, 0, 0);
+    border-radius: 60px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    font-size: 18px;
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.btn-c button:hover {
+    transform: translateY(-6px);
+    transition: 0.3s;
+    background-image: linear-gradient(45deg, var(--cor1), var(--cor2));
+    inset: 0;
+    border-radius: 60px;
+    color: white;
+}

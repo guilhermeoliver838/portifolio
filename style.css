@@ -1,0 +1,95 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@import url('css/header.css');
+@import url('css/home.css');
+@import url('css/about.css');
+@import url('css/skills.css');
+@import url('css/projects.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Configura o corpo da página */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: rgb(0, 0, 0);
+    /* Adiciona brilhos suaves usando as cores do portfólio */
+    background-image:
+    radial-gradient(
+        ellipse at top right,
+        rgba(0, 55, 87, 0.35) 0%,
+        transparent 60%
+    ),
+    radial-gradient(
+        ellipse at bottom left,
+        rgba(15, 189, 242, 0.12) 0%,
+        transparent 55%
+    ),
+    radial-gradient(
+        ellipse at center,
+        rgba(16, 135, 204, 0.06) 0%,
+        transparent 70%
+    );
+}
+
+/* Fundo animado de partículas */
+#particles-bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+/* Cabeçalho sempre acima das outras seções */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Conteúdo das demais seções */
+#home,
+#about,
+#skills,
+#projects,
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+#home {
+    width: 100%;
+}
+
+.icons8-credit {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 0;
+    color: rgba(255, 255, 255, 0.45);
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+
+.icons8-credit a {
+    color: #0FBDF2;
+    text-decoration: none;
+}
+
+.icons8-credit a:hover {
+    text-decoration: underline;
+}

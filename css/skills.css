@@ -1,0 +1,220 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* Seção Skills */
+.third-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 100px 20px 60px;
+}
+
+/* Conteúdo principal */
+.third-section .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+}
+
+/* Título */
+.third-section .skill h1 {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+/* Área visível do carrossel */
+.skills-carousel {
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+
+    /* Suaviza as bordas do carrossel */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 5%,
+        black 95%,
+        transparent
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 5%,
+        black 95%,
+        transparent
+    );
+}
+
+/* Faixa animada */
+.skills-track {
+    display: flex;
+    width: max-content;
+    animation: skills-scroll 38s linear infinite;
+}
+
+/* Cada sequência */
+.skills-group {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 14px;
+    padding-right: 14px;
+}
+
+/* Cartões */
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 112px;
+    min-width: 112px;
+    height: 105px;
+    padding: 12px;
+
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(15, 189, 242, 0.16);
+    border-radius: 10px;
+
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    text-align: center;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.25s ease,
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+/* Ícones */
+.skill-card img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* Destaque discreto */
+.skill-card:hover {
+    background-color: rgba(15, 189, 242, 0.05);
+    border-color: rgba(15, 189, 242, 0.45);
+    transform: translateY(-3px);
+}
+
+/* Movimento contínuo */
+@keyframes skills-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pausa ao passar o mouse */
+.skills-carousel:hover .skills-track {
+    animation-play-state: paused;
+}
+
+/* Acessibilidade: respeita preferência por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    .skills-track {
+        animation: none;
+    }
+
+    .skills-carousel {
+        overflow-x: auto;
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+}
+
+/* Habilidades e experiências */
+.third-section .he {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    width: 100%;
+    max-width: 800px;
+
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.third-section .he2 {
+    font-size: 26px;
+}
+
+/* Tablets */
+@media (max-width: 800px) {
+    .third-section .skill h1 {
+        font-size: 34px;
+    }
+
+    .skills-carousel {
+        max-width: 100%;
+    }
+}
+
+/* Celulares */
+@media (max-width: 500px) {
+    .third-section {
+        padding: 100px 16px 40px;
+    }
+
+    .third-section .skill {
+        gap: 2rem;
+    }
+
+    .third-section .skill h1 {
+        font-size: 28px;
+    }
+
+    .skills-group {
+        gap: 10px;
+        padding-right: 10px;
+    }
+
+    .skill-card {
+        width: 100px;
+        min-width: 100px;
+        height: 95px;
+        gap: 8px;
+        font-size: 13px;
+    }
+
+    .skill-card img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .third-section .he {
+        font-size: 16px;
+    }
+
+    .third-section .he2 {
+        font-size: 22px;
+    }
+}

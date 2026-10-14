@@ -1,0 +1,209 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'lato';
+}
+
+/* Estilo geral dos títulos h1 */
+h1 {
+    color: white;
+    font-size: 30px;
+}
+
+/* Destaca o nome na apresentação inicial */
+.first-section .cabecalho h1 strong {
+    font-size: 65px;
+}
+
+/* Define a cor do texto da apresentação */
+.home,
+.first-section {
+    color: white;
+}
+
+/* =========================================================
+   PRIMEIRA SEÇÃO — APRESENTAÇÃO
+   ========================================================= */
+
+/* Organiza o texto e a imagem da apresentação */
+.first-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin-top: 190px;
+    gap: 0;
+}
+
+/* Estiliza a foto principal do portfólio */
+.img-profile {
+    position: relative;
+    max-width: 620px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+/* Define o tamanho e impede a compressão do bloco de apresentação textual */
+.first-section .cabecalho {
+    width: 650px;
+    flex-shrink: 0;
+}
+
+/* Define o tamanho e impede a compressão do bloco da foto de perfil */
+.first-section .box-img {
+    width: 620px;
+    flex-shrink: 0;
+}
+
+/* Ajusta a imagem de perfil para ocupar o espaço disponível, mantendo suas proporções */
+.first-section .img-profile {
+    display: block;
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+}
+
+/* Estilos para links dentro de elementos com a classe social-icon */
+.social-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: #0FBDF2;
+    transition: 0.3s ease-in-out;
+}
+
+/* =========================================================
+   ÍCONES DE REDES SOCIAIS
+   ========================================================= */
+
+/* Organiza somente a lista de redes sociais da primeira seção */
+.first-section ul {
+    display: flex;
+    list-style-type: none;
+    position: relative;
+    gap: 20px;
+    margin-top: .8rem;
+}
+
+/* Aparência inicial dos itens das redes sociais */
+.first-section ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 2px 15px #0fbdf200;
+    border-radius: 60px;
+    transition: .2s;
+}
+
+/* Aumenta a largura do item ao passar o mouse */
+.first-section ul li:hover {
+    width: 120px;
+}
+
+/* Mostra o nome da rede social ao passar o mouse */
+.first-section ul li:hover .text {
+    transform: scale(1);
+}
+
+/* Esconde o ícone quando o nome aparece */
+.first-section ul li:hover .icon {
+    transform: scale(0);
+}
+
+/* Posiciona o ícone e o texto */
+.first-section ul li span {
+    position: absolute;
+}
+
+/* Estiliza os ícones das redes sociais */
+.first-section ul li .icon {
+    color: #0fbdf2;
+    font-size: 1.9em;
+    transition: .2s;
+}
+
+/* Estiliza os nomes das redes sociais */
+.first-section ul li .text {
+    color: white;
+    font-size: 17px;
+    transform: scale(0);
+    transition: .2s;
+    transition-delay: .1s;
+}
+
+/* Cria o fundo gradiente dos itens */
+.first-section ul li::before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(45deg, var(--cor1), var(--cor2));
+    inset: 0;
+    opacity: 0;
+    border-radius: 60px;
+}
+
+/* Exibe o gradiente ao passar o mouse */
+.first-section ul li:hover::before {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   ANIMAÇÃO DO TEXTO INICIAL
+   ========================================================= */
+
+/* Define a aparência e o posicionamento do texto animado */
+.txt-animado {
+    color: white;
+    font-size: 40px;
+    z-index: 5;
+    position: relative;
+}
+
+/* Estiliza o elemento que receberá as letras pelo JavaScript */
+.txt-animado span {
+    color: #0FBDF2;
+    position: relative;
+    display: inline-block;
+}
+
+/* Cria o cursor vertical ao lado da última letra */
+.txt-animado span::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    margin-left: 4px;
+    background-color: #0FBDF2;
+    vertical-align: -2px;
+
+    /* Faz o cursor piscar continuamente */
+    animation: piscar-cursor 0.8s steps(2, start) infinite;
+}
+
+/* Controla o efeito de piscar do cursor */
+@keyframes piscar-cursor {
+    to {
+        visibility: hidden;
+    }
+}
+
+/* Ajusta o tamanho do texto em telas menores */
+@media (max-width: 768px) {
+    .txt-animado {
+        font-size: 30px;
+    }
+}
+

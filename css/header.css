@@ -1,0 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Títulos */
+h1 {
+    color: white;
+    font-size: 30px;
+}
+
+/* Cabeçalho */
+header.site-header {
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+
+    /* Linha neon discreta na parte inferior */
+    border-bottom: 1px solid rgba(15, 189, 242, 0.1);
+    box-shadow: 0 1px 4px rgba(15, 189, 242, 0.08);
+}
+
+/* Barra de navegação: logo à esquerda e links à direita */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    min-height: 100px;
+    padding: 0 4%;
+    background-color: transparent;
+}
+
+/* Logotipo */
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+/* Imagem do logotipo */
+.img-logo {
+    display: block;
+    max-width: 43px;
+    height: auto;
+}
+
+/* Nome ao lado da logo */
+.name {
+    color: white;
+    font-size: 38px;
+    margin-left: 0;
+    white-space: nowrap;
+}
+
+/* Grupo de links */
+.navegar {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+/* Links do menu */
+.nav-links {
+    display: inline-block;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    transition: 0.4s;
+    white-space: nowrap;
+}
+
+/* Efeito ao passar o mouse */
+.nav-links:hover {
+    color: #0FBDF2;
+    text-decoration: underline;
+    text-shadow: 0 0 15px #0FBDF2;
+}
+
+/* Link da seção atualmente visível */
+.nav-links.active {
+    color: #0FBDF2;
+    text-shadow:
+        0 0 5px rgba(15, 189, 242, 0.7),
+        0 0 15px rgba(15, 189, 242, 0.5);
+    text-decoration: underline;
+    text-decoration-color: #0FBDF2;
+    text-underline-offset: 8px;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 4%;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .navegar {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        font-size: 18px;
+    }
+}
